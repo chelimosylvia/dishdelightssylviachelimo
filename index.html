@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Recipe App</title> 
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="main.css"> 
-</head>
-<body>
-    <div class="whole">
-        <nav class="navbar">
-            <div class="navbar-container container">
-                <input type="checkbox">
-                <div class="hamburger-lines">
-                    <span class="line line1"></span>
-                    <span class="line line2"></span>
-                    <span class="line line3"></span>
-                </div>
-                <ul id="menu-list" class="menuitems">
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#food-menu">Menu</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <h1 class="logo">Dish Delights!</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Menu</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h1>Dish Delights!</h1>
+    <nav>
+      <ul>
+       <a class="active" href="#home">Home page</a> 
+        <a href="#menu">Menu page</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </ul>
+      <form>
+        <div class="container">
+            <div class="search-container">
+                <input type="text" class="input" placeholder="Type a Dish Name Here ..." />
+                <button id="search-btn">Search</button>
             </div>
-        </nav>
-    <div class="container-search"> 
-        <div class="search-container"> 
-            <input type="text" placeholder="Type a Dish Name Here..." id="user-inp"> 
-            <button id="search-btn">Search</button> 
-        </div>
-        <div id="result"></div> 
+      </form>
+    </nav>
+    <div class="menu-wrapper container">
+        <ul id="food-menu"></ul>
     </div>
+      <div class="container">
+        <div class="img"></div>
+
+        <div class="content-container">
+          <h1 class="title">Food Name</h1>
+          <p class="info">
+            Food Description
+          </p>
+          <button class="main-btn">ksh1000 - Order Now</button>
+        </div>
+      </div>
+      <section class="ingredients"></section>
+    <section id="about">
+        <div class="about-wrapper container">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Welcome to our food paradise! We are passionate about providing delicious and high-quality meals. Our chefs use only the finest ingredients to create mouthwatering dishes that will leave you coming back for more. Explore our diverse menu and experience the flavors of our culinary creations.</p>
+
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-container container">
+            <div class="form-container">
+                <h2>Contact Us</h2>
+                <form>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="E-Mail">
+                <textarea name="" id="review" placeholder="Type Your Message Here"></textarea>
+                <button>Submit</button>
+            </form>
+            </div>
+        </div>
+    </section>
+
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
