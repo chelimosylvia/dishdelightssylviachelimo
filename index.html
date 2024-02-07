@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <h1>Dish Delights!</h1>
-    <nav>
-      <ul>
-       <a class="active" href="#home">Home page</a> 
+    <div class="navbar">
+      <div>
+       <a class="active" href="#home">Dish Delights</a>
+       <div>
         <a href="#menu">Menu page</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-      </ul>
+       </div>
+      </div>
       <form>
         <div class="container">
             <div class="search-container">
@@ -22,13 +23,9 @@
                 <button id="search-btn">Search</button>
             </div>
       </form>
-    </nav>
-    <div class="menu-wrapper container">
-        <ul id="food-menu"></ul>
     </div>
       <div class="container">
         <div class="img"></div>
-
         <div class="content-container">
           <h1 class="title">Food Name</h1>
           <p class="info">
@@ -38,11 +35,18 @@
         </div>
       </div>
       <section class="ingredients"></section>
+      <div class="display-container">
+        <img class="displayimg" src="https:\/\/www.themealdb.com\/images\/media\/meals\/kcv6hj1598733479.jpg">
+        <div class="displaybottom-left">
+          <h1 class="displayheader">Delicious !</h1>
+        </div>
+      </div>
     <section id="about">
         <div class="about-wrapper container">
+          <div class="image"></div>
             <div class="about-text">
                 <h2>About Us</h2>
-                <p>Welcome to our food paradise! We are passionate about providing delicious and high-quality meals. Our chefs use only the finest ingredients to create mouthwatering dishes that will leave you coming back for more. Explore our diverse menu and experience the flavors of our culinary creations.</p>
+                <p>Welcome to our food paradise! <br> We are passionate about providing delicious and high-quality meals. Our chefs use only the finest ingredients to create mouthwatering dishes that will leave you coming back for more. Explore our diverse menu and experience the flavors of our culinary creations.</p>
 
             </div>
         </div>
