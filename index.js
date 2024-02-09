@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const info = document.querySelector(".info");
     const img = document.querySelector(".img");
     const ingredientsOutput = document.querySelector(".ingredients");
+    const meallistOutput = document.querySelector(".meallist");
   
     const showMealInfo = (meal) => {
       const { strMeal, strMealThumb, strInstructions } = meal;
@@ -64,8 +65,49 @@ document.addEventListener("DOMContentLoaded", () => {
         clearUI();
       }
     };
-  
+    
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("column");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+    fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=')
+    .then(response => response.json())
+    .then(data => {
+        const meals = data.meals;
+        const userList = document.getElementById('user-list');
+
+        // Loop through the meals and create list items
+        meals.forEach(meal => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('meal', 'item');
+
+            // Create HTML structure for the meal details
+            listItem.innerHTML = `
+                <h2>${meal.strMeal}</h2>
+                <p>Category: ${meal.strCategory}</p>
+                <p>Area: ${meal.strArea}</p>
+                <img src="${meal.strMealThumb}" alt="${meal.strMeal}" style="max-width: 250px;">
+                <a href="${meal.strYoutube}" target="_blank">Watch Recipe</a>
+                <a href="${meal.strSource}" target="_blank">Source</a>
+            `;
+
+            // Append the list item to the user list
+            userList.appendChild(listItem);
+        });
+    })
+    .catch(error => console.error('Error fetching data:', error));
+
     document.querySelector("form").addEventListener("submit", searchMeal);
-    document.querySelector(".magnifier").addEventListener("click", searchMeal);
+    document.querySelector(".magnifier").addEventListener("click", searchMeal); 
   });
   

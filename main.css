@@ -1,147 +1,153 @@
 /* Reset some default styles */
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Global Styles */
-  body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Navbar Styles */
-  .navbar {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-  }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-  }
-  
-  .navbar a.active {
-    font-weight: bold;
-  }
-  
-  .search-container {
-    width: 100%; /* Full width */
-    display: grid; /* Use a grid layout */
-    grid-template-columns: 9fr 3fr; /* Divide into columns */
-    gap: 1.2em;
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
 
-  }
-  
-  .input {
-    padding: 5px;
-  }
-  /* header styles */
-.display-container {
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navigation */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.navbar a.active {
+  font-weight: bold;
+}
+
+/* Search Form */
+.search-form {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.input {
+  padding: 10px;
+  width: 200px;
+}
+
+#search-btn {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Random Meals */
+.random-meals {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.slideshow-container {
   position: relative;
-  max-width: 1600px;
-  min-width: 500px;
 }
-.displayimg {
-  width: 800px;
-  height: 500px;
+
+.column {
+  display: flex;
 }
-.displaybottom-left {
-  position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 20px;
-    background-color: rgba(17, 16, 16, 0.7);
-    padding: 16px;
-    opacity: 0.8;
+
+.column2 {
+ flex: 33.33%;
+ padding: 5px;
 }
-  /* Food Container Styles */
-  .container {
-    display: flex;
-    margin-top: 20px;
-  }
-  
-  .content-container {
-    flex: 2;
-    padding: 20px;
-  }
-  
-  .title {
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-  
-  .info {
-    margin-bottom: 20px;
-  }
-  
-  .main-btn {
-    background-color:white;
-    color: rgb(3, 3, 3);
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  
-  /* About Section Styles */
-  .about-wrapper {
-    padding: 50px 0;
-    margin: 0 -16px;
-  }
-  
-  .about-text {
-    max-width: 600px;
-    padding: 0 16px;
-    
-  }
-  .image {
-  width: 3500px;
-  height: 600px;
-  background: url("https:\/\/www.themealdb.com\/images\/media\/meals\/wssvvs1511785879.jpg");
-  }
-  
-  /* Contact Section Styles */
-  .contact-container {
-    padding: 50px 0;
-  }
-  
-  .form-container {
-    max-width: 400px;
-  }
-  
-  input, textarea, button {
-    display: block;
-    margin-bottom: 15px;
-    width: 1000px;
-    padding: 10px;
-  }
-  
-  button {
-    background-color: #30a043;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  .img{
-    transform: translateX(-120px);
-    margin-top: 1rem;
-    width: 350px;
-    height: 350px;
-    border-radius: 300px;
-    background: url("https://images.unsplash.com/photo-1600289031464-74d374b64991?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1075&q=80");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: conver;
-  }
-.review {
-  padding: 500px;
+
+/* Meals Menu */
+.meals-menu {
+  text-align: left;
+  display: table;
 }
-  
+
+.meallist {
+  list-style: none;
+}
+
+.meal-item {
+  padding: 10px;
+  margin: 5px;
+  background-color: #fff;
+}
+img {
+  display: flex;
+
+}
+
+/* Content Container */
+.content-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.title {
+  color: #333;
+}
+
+.info {
+  color: #555;
+}
+
+.main-btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* About Section */
+.imageabout {
+  width: 100%;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.about-text {
+  flex: 1;
+  padding: 0 20px;
+}
+
+/* Contact Section */
+.contact-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input, textarea, button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}

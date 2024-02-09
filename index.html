@@ -7,62 +7,92 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <div class="navbar">
-      <div>
-       <a class="active" href="#home">Dish Delights</a>
-       <div>
-        <a href="#menu">Menu page</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-       </div>
-      </div>
-      <form>
-        <div class="container">
-            <div class="search-container">
-                <input type="text" class="input" placeholder="Type a Dish Name Here ..." />
-                <button id="search-btn">Search</button>
-            </div>
-      </form>
-    </div>
-      <div class="container">
-        <div class="img"></div>
-        <div class="content-container">
-          <h1 class="title">Food Name</h1>
-          <p class="info">
-            Food Description
-          </p>
-          <button class="main-btn">ksh1000 - Order Now</button>
+    <nav class="navbar">
+      <a class="active" href="#home">Welcome to Dish Delights !</a>
+      <ul>
+        <li><a href="#menu">Menu page</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <form class="search-form">
+      <input type="text" class="input" placeholder="Type a Dish Name Here ..." />
+      <button id="search-btn">Search</button>
+    </form>
+    <section class="random-meals">
+      <div class="slideshow-container">
+        <div class="column">
+          <div class="numbertext">1/6</div>
+          <img class="column2" src="https:\/\/www.themealdb.com\/images\/media\/meals\/4pqimk1683207418.jpg"/>
+          <div class="text"> </div>
+        </div>
+        <div class="column">
+          <div class="numbertext">2/6</div>
+          <img class="column2" src="https:\/\/www.themealdb.com\/images\/media\/meals\/n3xxd91598732796.jpg"/>
+          <div class="text"></div>
+        </div>
+        <div class="column">
+          <div class="numbertext">3/6</div>
+          <img class="column2" src="https:\/\/www.themealdb.com\/images\/media\/meals\/wtsvxx1511296896.jpg"/>
+          <div class="text"></div>
+        </div>
+        <div class="column">
+          <div class="numbertext">4/6</div>
+          <img class="column2" src="https:\/\/www.themealdb.com\/images\/media\/meals\/urzj1d1587670726.jpg"/>
+          <div class="text"></div>
+        </div>
+        <div class="column">
+          <div class="numbertext">5/6</div>
+          <img class="column2" src="https:\/\/www.themealdb.com\/images\/media\/meals\/4er7mj1598733193.jpg"/>
+          <div class="text"> </div>
+        </div>
+        <div class="column">
+          <div class="numbertext">6/6</div>
+          <img class="column2" src="https:\/\/www.themealdb.com\/images\/media\/meals\/txsupu1511815755.jpg"/>
+          <div class="text"></div>
         </div>
       </div>
-      <section class="ingredients"></section>
-      <div class="display-container">
-        <img class="displayimg" src="https:\/\/www.themealdb.com\/images\/media\/meals\/kcv6hj1598733479.jpg">
-        <div class="displaybottom-left">
-          <h1 class="displayheader">Delicious !</h1>
-        </div>
-      </div>
-    <section id="about">
-        <div class="about-wrapper container">
-          <div class="image"></div>
-            <div class="about-text">
-                <h2>About Us</h2>
-                <p>Welcome to our food paradise! <br> We are passionate about providing delicious and high-quality meals. Our chefs use only the finest ingredients to create mouthwatering dishes that will leave you coming back for more. Explore our diverse menu and experience the flavors of our culinary creations.</p>
+      <br>
+    </section>
 
-            </div>
+    <section class="ingredients"></section>
+      <div class="content-container">
+        <h1 class="title"></h1>
+        <p class="info">
+          
+        </p>
+        <button class="main-btn">1000 - Order Now</button>
+      </div>
+    </div>
+    </section>
+      <div class="meals-menu">
+        <ul id='user-list' class="meallist">
+          <li class="meal-item"></li>
+        </ul>
+     </div>
+
+    <section id="about">
+      <div class="about-wrapper container">
+        <img class="imageabout"
+        src="https:\/\/www.themealdb.com\/images\/media\/meals\/urzj1d1587670726.jpg"/>
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>Welcome to our food paradise! <br> We are passionate about providing delicious and high-quality meals. Our chefs use only the finest ingredients to create mouthwatering dishes that will leave you coming back for more. Explore our diverse menu and experience the flavors of our culinary creations.</p>
         </div>
+      </div>
     </section>
     <section id="contact">
-        <div class="contact-container container">
-            <div class="form-container">
-                <h2>Contact Us</h2>
-                <form>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="E-Mail">
-                <textarea name="" id="review" placeholder="Type Your Message Here"></textarea>
-                <button>Submit</button>
-            </form>
-            </div>
+      <div class="contact-container container">
+        <div class="form-container">
+          <h2>Contact Us</h2>
+          <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="E-Mail">
+            <textarea name="" id="review" placeholder="Type Your Message Here"></textarea>
+          </form>
+          <button>Submit</button>
         </div>
+      </div>
     </section>
 
     <script src="index.js"></script>
