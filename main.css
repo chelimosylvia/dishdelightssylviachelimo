@@ -25,7 +25,7 @@ body {
 .navbar {
   background-color: wheat;
   padding: 15px 0;
-  
+  text-align: center;
   list-style: none;
 }
 
